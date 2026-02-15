@@ -193,10 +193,10 @@ private:
     nexus_base_ros::msg::Encoders msg;
     msg.header.stamp = now();
     msg.header.frame_id = frame_id_;
-    msg.enc0 = clampToInt16(v1);
-    msg.enc1 = clampToInt16(v2);
-    msg.enc2 = clampToInt16(v3);
-    msg.enc3 = clampToInt16(v4);
+    msg.enc0 = clampToInt16(v3);
+    msg.enc1 = clampToInt16(v4);
+    msg.enc2 = clampToInt16(v1);
+    msg.enc3 = clampToInt16(v2);
     wheel_vel_pub_->publish(msg);
   }
 
@@ -204,9 +204,9 @@ private:
     std_msgs::msg::Int32MultiArray msg;
     msg.data.resize(4);
     msg.data[0] = static_cast<int32_t>(p1);
-    msg.data[1] = static_cast<int32_t>(p4);
+    msg.data[1] = static_cast<int32_t>(p2);
     msg.data[2] = static_cast<int32_t>(p3);
-    msg.data[3] = static_cast<int32_t>(p2);
+    msg.data[3] = static_cast<int32_t>(p4);
     wheel_enc_pub_->publish(msg);
   }
 

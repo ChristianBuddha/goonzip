@@ -83,8 +83,8 @@ private:
     double v_rf = static_cast<double>(sample.rf) / 1000.0;
 
     double k = (wheel_separation_width_ / 2.0) + (wheel_separation_length_ / 2.0);
-    double linear_x = -(-v_lf + v_rf - v_lr + v_rr) / 4.0;
-    double linear_y = -(v_lf + v_rf - v_lr - v_rr) / 4.0;
+    double linear_x = (-v_lf + v_rf - v_lr + v_rr) / 4.0;
+    double linear_y = (v_lf + v_rf - v_lr - v_rr) / 4.0;
     double angular_z = -(v_lf + v_rf + v_lr + v_rr) / (4.0 * k);
 
     double delta_heading = angular_z * dt;

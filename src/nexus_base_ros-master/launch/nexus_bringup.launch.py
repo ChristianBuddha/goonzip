@@ -44,21 +44,21 @@ def generate_launch_description():
             ]),
         ),
 
-        Node(
-            package="nexus_base_ros",
-            executable="nexus_teleop_joy",
-            name="teleop_joy",
-            condition=IfCondition(LaunchConfiguration("use_joystick")),
-            parameters=[{
-                "axis_linear_x": LaunchConfiguration("axis_linear_x"),
-                "axis_linear_y": LaunchConfiguration("axis_linear_y"),
-                "axis_angular_z": LaunchConfiguration("axis_angular_z"),
-                "max_vel_x": LaunchConfiguration("max_vel_x"),
-                "max_vel_y": LaunchConfiguration("max_vel_y"),
-                "max_vel_th": LaunchConfiguration("max_vel_th"),
-            }],
-            output="screen",
-        ),
+        # Node(
+            # package="nexus_base_ros",
+            # executable="nexus_teleop_joy",
+            # name="teleop_joy",
+            # condition=IfCondition(LaunchConfiguration("use_joystick")),
+            # parameters=[{
+                # "axis_linear_x": LaunchConfiguration("axis_linear_x"),
+                # "axis_linear_y": LaunchConfiguration("axis_linear_y"),
+                # "axis_angular_z": LaunchConfiguration("axis_angular_z"),
+                # "max_vel_x": LaunchConfiguration("max_vel_x"),
+                # "max_vel_y": LaunchConfiguration("max_vel_y"),
+                # "max_vel_th": LaunchConfiguration("max_vel_th"),
+            # }],
+            # output="screen",
+        # ),
 
         Node(
             package="nexus_base_ros",
