@@ -1,0 +1,11 @@
+digraph G {
+"map" -> "robot2/odom"[label=" Broadcaster: default_authority\nAverage rate: 11.91\nBuffer length: 4.87\nMost recent transform: 1772540590.31817\nOldest transform: 1772540585.448238\n"];
+"robot2/base_link" -> "robot2/laser"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot2/odom" -> "robot2/base_link"[label=" Broadcaster: default_authority\nAverage rate: 69.842\nBuffer length: 4.968\nMost recent transform: 1772540589.511864\nOldest transform: 1772540584.543527\n"];
+"robot2/base_link" -> "robot2/base_footprint"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"robot2/base_link" -> "robot2/imu_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1772540589.5610723"[ shape=plaintext ] ;
+}->"map";
+}

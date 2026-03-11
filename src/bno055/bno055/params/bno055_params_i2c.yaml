@@ -27,7 +27,8 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 # Example parameters for an I2C connection to the BNO055 motion sensor.
-bno055:
+# Use wildcard node key so this file also works with namespaced nodes (e.g. /robot1/bno055).
+/**:
   ros__parameters:
     ros_topic_prefix: "bno055/"
     connection_type: "i2c"

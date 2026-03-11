@@ -123,8 +123,8 @@ private:
     odom.twist.covariance[0] = 0.0001;
     odom.twist.covariance[7] = 0.0001;
     odom.twist.covariance[35] = 0.0001;
+    
     odom_pub_->publish(odom);
-
     if (publish_tf_ && tf_broadcaster_) {
       geometry_msgs::msg::TransformStamped odom_tf;
       {
